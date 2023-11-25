@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.TableViewMaterielController">
+   <children>
+      <ImageView fitHeight="632.0" fitWidth="1154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="fxTableMateriel" editable="true" layoutX="240.0" layoutY="221.0" prefHeight="258.0" prefWidth="639.0">
+         <columns>
+            <TableColumn fx:id="fxNom" prefWidth="128.0" text="Nom parc" />
+            <TableColumn fx:id="fxNomMateriel" prefWidth="128.0" text="Nom materiel" />
+            <TableColumn fx:id="fxQunatite" prefWidth="128.0" text="Quanitié" />
+            <TableColumn fx:id="fxEtat" prefWidth="128.0" text="Etat" />
+            <TableColumn fx:id="fxDate" prefWidth="128.0" text="Date d'ajout" />
+         </columns>
+      </TableView>
+      <Button fx:id="fxdelete" layoutX="471.0" layoutY="178.0" mnemonicParsing="false" onAction="#fxSupprimer" prefHeight="37.0" prefWidth="40.0" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="RED" iconName="TRASH" textAlignment="CENTER" />
+         </graphic></Button>
+      <Button layoutX="755.0" layoutY="99.0" mnemonicParsing="false" onAction="#fxbacktoTableViewParc" text="Liste de parcs" textFill="#1da85b">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="849.0" layoutY="519.0" mnemonicParsing="false" onAction="#fxRefrech" text="↻" visible="false" />
+      <TextField fx:id="fxfind" layoutX="240.0" layoutY="178.0" prefHeight="37.0" prefWidth="172.0" text="Chercher..." />
+      <Button layoutX="421.0" layoutY="178.0" mnemonicParsing="false" onAction="#fxchercherMat" prefHeight="34.0" prefWidth="40.0" textFill="#2d05cd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#2d05cd" iconName="SEARCH" />
+         </graphic>
+      </Button>
+      <Button layoutX="240.0" layoutY="99.0" mnemonicParsing="false" onAction="#gotomenu" prefHeight="37.0" prefWidth="40.0" textFill="#1da85b">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#1da85b" iconName="BARS" />
+         </graphic>
+      </Button>
+      <Label layoutX="395.0" layoutY="104.0" text="Liste de matériel :" textFill="#0a4ef5">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="fxnomdeparc" layoutX="571.0" layoutY="104.0" text="&quot;Label&quot;" textFill="#073694">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="733.0" layoutY="178.0" mnemonicParsing="false" onAction="#fxexportoPDF" prefHeight="37.0" prefWidth="146.0" text="Exporter on PDF">
+         <graphic>
+            <FontAwesomeIcon fill="#1919d0" iconName="DOWNLOAD" />
+         </graphic>
+      </Button>
+      <Label fx:id="fxmail" layoutX="402.0" layoutY="509.0" text="Un mail de rappel a envoyé à votre courriel courriel" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.TresorerieFXMLController">
+   <children>
+      <ImageView fitHeight="568.0" fitWidth="1002.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttontransaction" layoutX="363.0" layoutY="162.0" mnemonicParsing="false" onAction="#gototransaction" prefHeight="81.0" prefWidth="317.0" style="-fx-background-color: #722f2f;" text="Transactions" textFill="WHITE" />
+      <Button fx:id="buttoncategorie" layoutX="363.0" layoutY="279.0" mnemonicParsing="false" onAction="#gotocategorie" prefHeight="81.0" prefWidth="317.0" style="-fx-background-color: #722f2f;" text="catégories de transaction" textFill="WHITE" />
+      <Button layoutX="148.0" layoutY="69.0" mnemonicParsing="false" onAction="#GoToWelcome" prefHeight="43.0" prefWidth="45.0">
+         <graphic>
+            <FontAwesomeIcon fill="#6b1818" iconName="ARROW_LEFT" />
+         </graphic>
+      </Button>
+      <Label layoutX="325.0" layoutY="73.0" text="Bienvenu dans l'espace trésorerie" textFill="#722f2f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

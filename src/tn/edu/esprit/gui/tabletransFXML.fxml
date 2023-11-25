@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.TabletransFXMLController">
+   <children>
+      <ImageView fitHeight="499.0" fitWidth="927.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonajoutertra" layoutX="461.0" layoutY="391.0" mnemonicParsing="false" onAction="#ajoutertrans" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon fill="#4154d3" iconName="PLUS" />
+         </graphic></Button>
+      <TableView fx:id="transactionstable1" layoutX="194.0" layoutY="186.0" prefHeight="197.0" prefWidth="496.0">
+         <columns>
+            <TableColumn fx:id="categoriecolumn" prefWidth="137.0" text="Categorie" />
+            <TableColumn fx:id="typecolumn" prefWidth="102.0" text="Type" />
+            <TableColumn fx:id="datecolumn" minWidth="8.0" prefWidth="164.0" text="Date" />
+            <TableColumn fx:id="montantcolumn" prefWidth="92.0" text="Montant" />
+         </columns>
+      </TableView>
+      <Button fx:id="buttonaffichertra" layoutX="588.0" layoutY="390.0" mnemonicParsing="false" onAction="#affichertra" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon iconName="REFRESH" />
+         </graphic></Button>
+      <Button fx:id="buttonsupprimertra" layoutX="644.0" layoutY="390.0" mnemonicParsing="false" onAction="#supprimertra" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon fill="#d31111" iconName="TRASH" />
+         </graphic></Button>
+      <Button fx:id="buttoncherchertra" layoutX="381.0" layoutY="126.0" mnemonicParsing="false" onAction="#cherchertra" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon fill="#9e9292" iconName="SEARCH" />
+         </graphic></Button>
+      <TextField fx:id="textcherchertra" layoutX="194.0" layoutY="126.0" prefHeight="43.0" prefWidth="180.0" />
+      <Label layoutX="334.0" layoutY="47.0" prefHeight="43.0" prefWidth="255.0" text="Liste des transactions" textFill="#607a0c">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="tranotfound" layoutX="217.0" layoutY="412.0" prefHeight="21.0" prefWidth="180.0" textFill="#a10a0a" />
+      <Button fx:id="buttoncategoriecat" layoutX="194.0" layoutY="68.0" mnemonicParsing="false" onAction="#categoriecat" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon fill="#578007" iconName="ARROW_LEFT" />
+         </graphic></Button>
+      <Label fx:id="tranotfound1" layoutX="236.0" layoutY="401.0" prefHeight="21.0" prefWidth="168.0" textFill="#2c7c09" />
+      <Button fx:id="buttonmodifiertra" layoutX="525.0" layoutY="390.0" mnemonicParsing="false" onAction="#gotoupdate" prefHeight="43.0" prefWidth="46.0" textFill="#607a0c">
+         <graphic>
+            <FontAwesomeIcon fill="#a221b9" iconName="EDIT" text="" />
+         </graphic></Button>
+      <Label fx:id="tranotfound2" layoutX="446.0" layoutY="130.0" prefHeight="36.0" prefWidth="269.0" textFill="#3a0bc6" />
+      <Label fx:id="nbtra" layoutX="320.0" layoutY="83.0" prefHeight="36.0" prefWidth="269.0" textFill="#5e380a" />
+   </children>
+</AnchorPane>

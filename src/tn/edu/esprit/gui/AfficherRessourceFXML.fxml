@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.AfficherRessourceFXMLController">
+   <children>
+      <ImageView fitHeight="639.0" fitWidth="972.0">
+         <image>
+            <Image url="@../../../../image/Capture%20d'écran%202023-10-13%20111510.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="suppRES" layoutX="504.0" layoutY="180.0" mnemonicParsing="false" onAction="#SupprimerRessource" prefHeight="41.0" prefWidth="37.0" visible="false">
+         <graphic>
+            <FontAwesomeIcon fill="#dd0606" iconName="TRASH" />
+         </graphic></Button>
+      <Button layoutX="448.0" layoutY="180.0" mnemonicParsing="false" onAction="#chercherRessource" prefHeight="41.0" prefWidth="37.0">
+         <graphic>
+            <FontAwesomeIcon iconName="SEARCH" />
+         </graphic></Button>
+      <TableView fx:id="viewRessource" editable="true" layoutX="244.0" layoutY="237.0" prefHeight="261.0" prefWidth="519.0">
+         <columns>
+            <TableColumn fx:id="typeRes" prefWidth="159.0" text="Type" />
+            <TableColumn fx:id="speciesRes" prefWidth="196.0" text="Specie" />
+            <TableColumn fx:id="quantiteRes" prefWidth="163.0" text="Quantité" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtRechercherRes" layoutX="244.0" layoutY="180.0" prefHeight="41.0" prefWidth="187.0" />
+      <Button layoutX="215.0" layoutY="97.0" mnemonicParsing="false" onAction="#retourAfficheRessource" prefHeight="31.0" prefWidth="37.0">
+         <graphic>
+            <FontAwesomeIcon iconName="ARROW_LEFT" />
+         </graphic></Button>
+      <Label layoutX="406.0" layoutY="112.0" text="Liste des ressources" textFill="#eb0808">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

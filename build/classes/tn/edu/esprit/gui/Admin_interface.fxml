@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="929.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.Admin_interfaceController">
+    <stylesheets>
+        <URL value="@admin_interface.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="934.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/background_image1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label1" alignment="CENTER" layoutX="201.0" layoutY="69.0" minHeight="16" minWidth="69" prefHeight="41.0" prefWidth="102.0" text="Users">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="UsersTable" editable="true" layoutX="181.0" layoutY="132.0" prefHeight="242.0" prefWidth="587.0">
+         <columns>
+            <TableColumn fx:id="userNom" prefWidth="92.0" text="Nom" />
+            <TableColumn fx:id="userPrenom" prefWidth="92.800048828125" text="Prenom" />
+            <TableColumn fx:id="userEmail" prefWidth="114.4000244140625" text="Email" />
+            <TableColumn fx:id="userNumero" prefWidth="93.60003662109375" text="Numero" />
+            <TableColumn fx:id="userRole" prefWidth="72.79998779296875" text="Role" />
+            <TableColumn fx:id="userVille" minWidth="3.199951171875" prefWidth="55.9998779296875" text="Ville" />
+            <TableColumn fx:id="userSexe" prefWidth="139.19998779296873" text="Sexe" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="search" buttonType="RAISED" layoutX="552.0" layoutY="90.0" onAction="#searchUserAction" ripplerFill="#2196f3" style="-fx-background-color: FAFAFA;" text="Search">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="Filter" focusColor="#2196f3" labelFloat="true" layoutX="626.0" layoutY="90.0" prefHeight="26.0" prefWidth="115.0" text="Nom" />
+      <JFXButton fx:id="addPartsButton" buttonType="RAISED" layoutX="555.0" layoutY="387.0" onAction="#partAddButtonAction" prefHeight="26.0" prefWidth="90.0" ripplerFill="#2196f3" style="-fx-background-color: FAFAFA;" text="Ajouter" />
+      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="676.0" layoutY="387.0" onAction="#deleteUserAction" prefHeight="26.0" prefWidth="90.0" ripplerFill="#2196f3" style="-fx-background-color: FAFAFA;" text="Supprimer" />
+      <JFXButton fx:id="deconnexion" buttonType="RAISED" layoutX="799.0" layoutY="14.0" onAction="#deconnexionAction" prefHeight="35.0" prefWidth="115.0" ripplerFill="#2196f3" style="-fx-background-color: #000000;" text="Deconnexion" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="337.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.AjouterParcFXMLController">
+   <children>
+      <ImageView fitHeight="721.0" fitWidth="1039.0" layoutX="-17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="243.0" layoutY="198.0" text="Nom de parc" />
+      <Label layoutX="243.0" layoutY="261.0" text="Adresse de parc" />
+      <Label layoutX="243.0" layoutY="326.0" text="Superficie de parc" />
+      <TextField fx:id="fxNomParc" layoutX="387.0" layoutY="193.0" />
+      <TextField fx:id="fxAdresseParc" layoutX="387.0" layoutY="256.0" />
+      <TextField fx:id="fxSuperficieParc" layoutX="387.0" layoutY="321.0" />
+      <Button layoutX="452.0" layoutY="402.0" mnemonicParsing="false" onAction="#fxAjouterParc" text="Ajouter ">
+         <graphic>
+            <FontAwesomeIcon fill="#16ee57" iconName="PLUS" />
+         </graphic></Button>
+      <Button layoutX="204.0" layoutY="89.0" mnemonicParsing="false" onAction="#fxGoToALLParcs">
+         <graphic>
+            <FontAwesomeIcon fill="#0ceb39" iconName="ARROW_LEFT" />
+         </graphic></Button>
+      <Label layoutX="434.0" layoutY="91.0" text="Ajout de parc" textFill="#0a4ef5">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

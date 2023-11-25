@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="642.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.StatistiqueController">
+   <children>
+      <ImageView fitHeight="642.0" fitWidth="1109.0">
+         <image>
+            <Image url="@../../../../image/Capture%20d'écran%202023-10-13%20111510.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="249.0" layoutY="109.0" mnemonicParsing="false" onAction="#retourStat">
+         <graphic>
+            <FontAwesomeIcon iconName="ARROW_LEFT" />
+         </graphic>
+      </Button>
+      <TextArea fx:id="nombreTerrain" layoutX="319.0" layoutY="106.0" prefHeight="68.0" prefWidth="472.0" />
+      <TextArea fx:id="totalSuperficie" layoutX="318.0" layoutY="174.0" prefHeight="68.0" prefWidth="472.0" />
+      <TextArea fx:id="statistiquesTerrains" layoutX="319.0" layoutY="242.0" prefHeight="108.0" prefWidth="472.0" />
+      <TextArea fx:id="sommeActTermine" layoutX="318.0" layoutY="350.0" prefHeight="68.0" prefWidth="472.0" />
+      <TextArea fx:id="sommeActAttent" layoutX="319.0" layoutY="418.0" prefHeight="68.0" prefWidth="472.0" />
+   </children>
+</AnchorPane>

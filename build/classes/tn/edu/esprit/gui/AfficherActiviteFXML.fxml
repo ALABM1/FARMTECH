@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.AfficherActiviteFXMLController">
+   <children>
+      <ImageView fitHeight="617.0" fitWidth="925.0">
+         <image>
+            <Image url="@../../../../image/Capture%20d'écran%202023-10-13%20111510.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="415.0" layoutY="149.0" mnemonicParsing="false" onAction="#chercherActivite" prefHeight="44.0" prefWidth="39.0">
+         <graphic>
+            <FontAwesomeIcon iconName="SEARCH" />
+         </graphic></Button>
+      <Button fx:id="supACT" layoutX="468.0" layoutY="149.0" mnemonicParsing="false" onAction="#SupprimerActivite" prefHeight="44.0" prefWidth="39.0" visible="false">
+         <graphic>
+            <FontAwesomeIcon fill="#e10606" iconName="TRASH" />
+         </graphic></Button>
+      <TableView fx:id="viewActivite" editable="true" layoutX="187.0" layoutY="211.0" prefHeight="271.0" prefWidth="577.0">
+        <columns>
+          <TableColumn fx:id="objetA" prefWidth="95.0" text="Objet" />
+          <TableColumn fx:id="descriptionA" prefWidth="132.0" text="Description" />
+            <TableColumn fx:id="distinataireA" prefWidth="139.0" text="Distinataire" />
+            <TableColumn fx:id="EmailDisA" prefWidth="105.0" text="Email" />
+            <TableColumn fx:id="speciesAct" prefWidth="122.0" text="Species" />
+            <TableColumn fx:id="etatAct" prefWidth="95.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnRetourAfficherActivite" layoutX="206.0" layoutY="92.0" mnemonicParsing="false" onAction="#retourAfficherActivite" prefHeight="34.0" prefWidth="39.0">
+         <graphic>
+            <FontAwesomeIcon iconName="ARROW_LEFT" text="" />
+         </graphic></Button>
+      <Button fx:id="btnAjouterNouveauActivite" layoutX="411.0" layoutY="501.0" mnemonicParsing="false" onAction="#ajouterNouveauActivite" prefHeight="44.0" prefWidth="115.0" text="Activité">
+         <graphic>
+            <FontAwesomeIcon fill="#08d71d" iconName="PLUS" />
+         </graphic></Button>
+      <TextField fx:id="chercherActivite" layoutX="187.0" layoutY="149.0" prefHeight="44.0" prefWidth="212.0" />
+      <Label layoutX="399.0" layoutY="92.0" text="Liste des activités" textFill="#da0707">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

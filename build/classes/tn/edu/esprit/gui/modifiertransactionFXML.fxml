@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="tn.edu.esprit.gui.ModifiertransactionFXMLController">
+   <children>
+      <ImageView fitHeight="446.0" fitWidth="773.0" layoutX="-17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="224.0" layoutY="51.0" text="Modifier transaction" textFill="#607c3a">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="149.0" text="Categorie:" textFill="#607c3a" />
+      <Label fx:id="modnotfound" layoutX="190.0" layoutY="337.0" prefHeight="21.0" prefWidth="182.0" textFill="#d71e1e" />
+      <Label layoutX="254.0" layoutY="237.0" text="Date:" textFill="#607c3a" />
+      <Label layoutX="254.0" layoutY="287.0" text="Montant:" textFill="#607c3a" />
+      <ChoiceBox fx:id="fxCategtra1" layoutX="337.0" layoutY="144.0" prefWidth="150.0" />
+      <RadioButton fx:id="fxRevenu1" layoutX="321.0" layoutY="200.0" mnemonicParsing="false" text="Revenu" textFill="#607c3a">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="fxDepense1" layoutX="449.0" layoutY="199.0" mnemonicParsing="false" text="Dépense" textFill="#607c3a">
+         <toggleGroup>
+            <ToggleGroup fx:id="type1" />
+         </toggleGroup>
+      </RadioButton>
+      <DatePicker fx:id="fxDatetra1" layoutX="337.0" layoutY="232.0" prefHeight="21.0" prefWidth="150.0" promptText="select date" />
+      <TextField fx:id="fxMontant1" layoutX="337.0" layoutY="282.0" prefHeight="21.0" prefWidth="150.0" />
+      <Button id="ajoutertra" fx:id="fxretourtra1" layoutX="425.0" layoutY="332.0" mnemonicParsing="false" onAction="#retourAction" text="retour" textFill="#5f7a3a" />
+      <Button id="ajoutertra" fx:id="fxModifiertra1" layoutX="509.0" layoutY="332.0" mnemonicParsing="false" onAction="#ModifierAction" text="modifier" textFill="#5f7a3a" />
+   </children>
+</AnchorPane>

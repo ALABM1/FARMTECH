@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.gui.GetAllFXMLController">
+   <children>
+      <ImageView fitHeight="632.0" fitWidth="1154.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="fxTableParc" editable="true" layoutX="250.0" layoutY="221.0" prefHeight="296.0" prefWidth="624.0">
+         <columns>
+            <TableColumn fx:id="fxNom" prefWidth="218.0" text="Nom parc" />
+            <TableColumn fx:id="fxAdresse" prefWidth="210.0" text="Adresse " />
+            <TableColumn fx:id="fxSuperficie" minWidth="0.0" prefWidth="195.0" text="Superficie" />
+         </columns>
+      </TableView>
+      <Button layoutX="495.0" layoutY="179.0" mnemonicParsing="false" onAction="#fxAfficher" prefHeight="37.0" prefWidth="37.0" textFill="#792032">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#792032" iconName="REFRESH" />
+         </graphic>
+      </Button>
+      <Button fx:id="fxsupp" layoutX="544.0" layoutY="179.0" mnemonicParsing="false" onAction="#fxSupprimer" prefHeight="37.0" prefWidth="37.0" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="RED" iconName="TRASH" textAlignment="CENTER" />
+         </graphic>
+      </Button>
+      <TextField fx:id="fxtextchercher" layoutX="250.0" layoutY="179.0" prefHeight="37.0" prefWidth="187.0" text="chercher...">
+         <font>
+            <Font name="Lucida Sans Regular" size="15.0" />
+         </font></TextField>
+      <Button layoutX="447.0" layoutY="179.0" mnemonicParsing="false" onAction="#fxChercher" prefHeight="37.0" prefWidth="4.0" textFill="#2d05cd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#2d05cd" iconName="SEARCH" />
+         </graphic></Button>
+      <Button fx:id="fxTransferButton" layoutX="653.0" layoutY="531.0" mnemonicParsing="false" onAction="#fxTranfserpage" prefHeight="37.0" prefWidth="217.0" text="Afficher materiel du parc" textFill="#1b9443" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="fxAjouterduMat" layoutX="250.0" layoutY="531.0" mnemonicParsing="false" onAction="#fxAjouterduMat" prefHeight="37.0" prefWidth="181.0" text="Ajouter materiel" textFill="#1b9443" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="250.0" layoutY="89.0" mnemonicParsing="false" onAction="#fxMenuGetALL" prefHeight="34.0" prefWidth="37.0" textFill="#1da85b">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#1da85b" iconName="BARS" />
+         </graphic></Button>
+      <Button layoutX="437.0" layoutY="531.0" mnemonicParsing="false" onAction="#fxGoToAddParc" prefHeight="37.0" prefWidth="209.0" text="Ajouter Parc" textFill="#1b9443">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="484.0" layoutY="94.0" text="Liste de parcs" textFill="#0a4ef5">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="741.0" layoutY="92.0" mnemonicParsing="false" onAction="#fxGoToAllMateriel" text="Liste de materiel" textFill="#1da85b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="728.0" layoutY="179.0" mnemonicParsing="false" onAction="#fxexportToPDF" prefHeight="37.0" prefWidth="146.0" text="Exporter on PDF">
+         <graphic>
+            <FontAwesomeIcon fill="#1919d0" iconName="DOWNLOAD" />
+         </graphic>
+      </Button>
+      <Button layoutX="682.0" layoutY="179.0" mnemonicParsing="false" onAction="#AfficherCourbe" prefHeight="37.0" prefWidth="37.0">
+         <graphic>
+            <FontAwesomeIcon fill="#b2793b" iconName="LINE_CHART" wrappingWidth="17.14285659790039" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
